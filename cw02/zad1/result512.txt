@@ -1,0 +1,39 @@
+
+Sorting - num of records: 5000; record length: 512
+sorting lib
+   Real      User      System
+5.600000   1.860000   3.730000   
+
+sorting sys
+   Real      User      System
+10.030000   2.090000   7.930000   
+
+Copying  - num of records: 5000; record length: 512
+copying lib
+   Real      User      System
+0.010000   0.000000   0.000000   
+
+copying sys
+   Real      User      System
+0.010000   0.000000   0.010000   
+
+---------------------------------------------------
+Sorting - num of records: 10000; record length: 512
+sorting lib
+   Real      User      System
+21.850000   7.300000   14.510000   
+
+sorting sys
+   Real      User      System
+38.890000   7.960000   30.920000   
+
+Copying  - num of records: 10000; record length: 512
+copying lib
+   Real      User      System
+0.020000   0.000000   0.000000   
+
+copying sys
+   Real      User      System
+0.020000   0.000000   0.010000   
+
+---------------------------------------------------

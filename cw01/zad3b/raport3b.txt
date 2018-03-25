@@ -1,0 +1,142 @@
+
+Static lib: 
+O0: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.790000   5.360000   0.420000   
+del_and_add
+   Real      User      System
+0.290000   0.260000   0.020000   
+del_then_add
+   Real      User      System
+0.280000   0.270000   0.020000   
+find
+   Real      User      System
+1.150000   1.150000   0.000000   
+O2: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+4.540000   4.240000   0.290000   
+del_and_add
+   Real      User      System
+0.230000   0.230000   0.000000   
+del_then_add
+   Real      User      System
+0.230000   0.220000   0.010000   
+find
+   Real      User      System
+1.140000   1.140000   0.000000   
+Os: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.140000   4.850000   0.280000   
+del_and_add
+   Real      User      System
+0.260000   0.250000   0.010000   
+del_then_add
+   Real      User      System
+0.270000   0.260000   0.010000   
+find
+   Real      User      System
+1.150000   1.150000   0.000000   
+----------------------------------------------
+Shared lib: 
+O0: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.420000   5.120000   0.300000   
+del_and_add
+   Real      User      System
+0.280000   0.270000   0.000000   
+del_then_add
+   Real      User      System
+0.280000   0.270000   0.010000   
+find
+   Real      User      System
+1.150000   1.150000   0.000000   
+O2: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+4.390000   4.090000   0.300000   
+del_and_add
+   Real      User      System
+0.230000   0.220000   0.000000   
+del_then_add
+   Real      User      System
+0.220000   0.210000   0.010000   
+find
+   Real      User      System
+1.150000   1.150000   0.000000   
+Os: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.040000   4.740000   0.290000   
+del_and_add
+   Real      User      System
+0.270000   0.260000   0.000000   
+del_then_add
+   Real      User      System
+0.260000   0.250000   0.010000   
+find
+   Real      User      System
+1.210000   1.220000   0.000000   
+----------------------------------------------
+Dynamic lib: 
+O0: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.450000   5.150000   0.300000   
+del_and_add
+   Real      User      System
+0.280000   0.260000   0.010000   
+del_then_add
+   Real      User      System
+0.280000   0.270000   0.010000   
+find
+   Real      User      System
+1.150000   1.150000   0.000000   
+O2: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+4.590000   4.310000   0.270000   
+del_and_add
+   Real      User      System
+0.230000   0.230000   0.010000   
+del_then_add
+   Real      User      System
+0.240000   0.230000   0.000000   
+find
+   Real      User      System
+1.140000   1.140000   0.000000   
+Os: 
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.180000   4.870000   0.310000   
+del_and_add
+   Real      User      System
+0.260000   0.260000   0.010000   
+del_then_add
+   Real      User      System
+0.270000   0.250000   0.010000   
+find
+   Real      User      System
+1.150000   1.150000   0.000000   
+----------------------------------------------

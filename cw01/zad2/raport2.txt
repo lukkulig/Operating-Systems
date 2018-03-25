@@ -1,0 +1,30 @@
+
+
+No of blocks: 95000  Block size: 10000  Allocation: static
+create table
+   Real      User      System
+11.370000   10.620000   0.730000   
+del_and_add
+   Real      User      System
+1.380000   1.300000   0.080000   
+del_then_add
+   Real      User      System
+6.750000   2.760000   3.510000   
+find
+   Real      User      System
+4.450000   4.410000   0.030000   
+
+No of blocks: 95000  Block size: 10000  Allocation: dynamic
+create table
+   Real      User      System
+11.900000   11.190000   0.690000   
+del_and_add
+   Real      User      System
+1.250000   1.180000   0.070000   
+del_then_add
+   Real      User      System
+1.180000   1.150000   0.030000   
+find
+   Real      User      System
+2.410000   2.410000   0.000000   
+----------------------------------------------

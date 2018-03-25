@@ -1,0 +1,91 @@
+
+Static lib: 
+
+No of blocks: 95000  Block size: 5000  Allocation: static
+create table
+   Real      User      System
+6.100000   5.600000   0.490000   
+del_and_add
+   Real      User      System
+0.290000   0.280000   0.020000   
+del_then_add
+   Real      User      System
+0.290000   0.270000   0.020000   
+find
+   Real      User      System
+1.240000   1.230000   0.000000   
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.830000   5.480000   0.340000   
+del_and_add
+   Real      User      System
+0.290000   0.270000   0.010000   
+del_then_add
+   Real      User      System
+0.280000   0.280000   0.010000   
+find
+   Real      User      System
+1.140000   1.140000   0.000000   
+----------------------------------------------
+Shared lib: 
+
+No of blocks: 95000  Block size: 5000  Allocation: static
+create table
+   Real      User      System
+5.750000   5.290000   0.470000   
+del_and_add
+   Real      User      System
+0.310000   0.290000   0.010000   
+del_then_add
+   Real      User      System
+0.310000   0.290000   0.020000   
+find
+   Real      User      System
+1.490000   1.480000   0.000000   
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.550000   5.230000   0.310000   
+del_and_add
+   Real      User      System
+0.280000   0.270000   0.010000   
+del_then_add
+   Real      User      System
+0.280000   0.270000   0.010000   
+find
+   Real      User      System
+1.140000   1.140000   0.000000   
+----------------------------------------------
+Dynamic lib: 
+
+No of blocks: 95000  Block size: 5000  Allocation: static
+create table
+   Real      User      System
+5.540000   5.140000   0.400000   
+del_and_add
+   Real      User      System
+0.270000   0.270000   0.000000   
+del_then_add
+   Real      User      System
+0.280000   0.270000   0.020000   
+find
+   Real      User      System
+1.330000   1.320000   0.000000   
+
+No of blocks: 95000  Block size: 5000  Allocation: dynamic
+create table
+   Real      User      System
+5.630000   5.280000   0.340000   
+del_and_add
+   Real      User      System
+0.280000   0.280000   0.010000   
+del_then_add
+   Real      User      System
+0.280000   0.270000   0.010000   
+find
+   Real      User      System
+1.170000   1.160000   0.000000   
+----------------------------------------------
