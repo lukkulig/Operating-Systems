@@ -1,0 +1,4 @@
+echo "echo working"
+ls -l -a
+wc -l -m -w example
+wc example
