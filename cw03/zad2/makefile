@@ -9,7 +9,5 @@ clean:
 	
 tests:
 	./test example
-	./test as
-	./test
 
 
