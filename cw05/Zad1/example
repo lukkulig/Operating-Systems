@@ -1,0 +1,8 @@
+ls -l
+echo ---------------------------
+ls -l | grep ^-rw-
+echo ---------------------------
+ls -l | grep ^-rw- | head -n 1
+echo ---------------------------
+ls -l | grep ma | head -n 2| sort | head -n 1
+
