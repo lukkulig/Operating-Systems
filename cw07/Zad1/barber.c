@@ -39,25 +39,27 @@ int main(int argc, char** argv) {
 	atexit(__exit);
 	initBarberShop(seats);
 
+    releaseSem(sem_ID);
+
 	while(1){
-        getSem(sem_ID);
-        switch(BarberShop->status){
-            case BARBER_IDLE:
-                if(!isQueueEmpty()){
+        acquireSem(sem_ID);
+        switch(BarberShop->barber_activity){
+            case BARBER_INACTIVE:
+                if(BarberShop->waiting_clients != 0){
                     inviteClient();
-                    BarberShop->status = BARBER_READY;
+                    BarberShop->barber_activity = BARBER_WAITING;
                 }else{
-                    printf("%lo Barber: fell asleep\n", getTime());
-                    BarberShop->status = BARBER_SLEEPING;
+                    printf("Barber: fell asleep (%ld)\n", getTime());
+                    BarberShop->barber_activity = BARBER_SLEEPING;
                 }
                 break;
-            case BARBER_AWAKEN:
-                printf("%lo Barber: woke up\n", getTime());
-                BarberShop->status = BARBER_READY;
+            case BARBER_AWAKENING:
+                printf("Barber: woke up (%ld)\n", getTime());
+                BarberShop->barber_activity = BARBER_WAITING;
                 break;
             case BARBER_SHAVING:
                 shaveClient();
-                BarberShop->status = BARBER_READY;
+                BarberShop->barber_activity = BARBER_WAITING;
                 break;
             default:
                 break;
@@ -73,12 +75,13 @@ void __exit(void)
 {
     if (fifo) close(fifo);
     unlink(FIFO_PATH);
+    shmdt(BarberShop);
     if(!shm_ID) shmctl(shm_ID, IPC_RMID, NULL);
     if(!sem_ID)semctl(sem_ID, 0, IPC_RMID, NULL);
 }
 
 void handleSIGTERM(int sig){
-	printf("Closing BarberShop\n");
+	printf("Closing BarberShop (%ld)\n",getTime());
     exit(EXIT_SUCCESS);
 }
 
@@ -110,7 +113,7 @@ void initBarberShop(int seats){
         exit(EXIT_FAILURE);
     }
 
-    BarberShop->status=BARBER_SLEEPING;
+    BarberShop->barber_activity=BARBER_SLEEPING;
     BarberShop->waiting_seats=seats;
 	BarberShop->waiting_clients=0;
 	BarberShop->current_client=-1;
@@ -130,12 +133,12 @@ void inviteClient(){
     char buf[10];
     read(fifo, &buf, sizeof(char)*10);
     BarberShop->current_client=(pid_t)strtol(buf, 0, 10);
-    printf("%lo Barber: invited client %d\n", getTime(), BarberShop->current_client);
+    printf("Barber: invited client %d (%ld)\n", BarberShop->current_client, getTime());
 }
 
 void shaveClient(){
     pid_t client = BarberShop->current_client;
-    printf("%lo Barber: started shaving client %i\n",getTime(),client);
-    printf("%lo Barber: finished shaving client %i\n",getTime(),client);
+    printf("Barber: started shaving client %i (%ld)\n", client, getTime());
+    printf("Barber: finished shaving client %i (%ld)\n", client, getTime());
     BarberShop->current_client = -1;
 }
