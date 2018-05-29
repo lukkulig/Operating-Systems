@@ -1,0 +1,48 @@
+Threads amount:		1
+Filter dimension:	3
+Real time:		0.065082 sec
+
+Threads amount:		2
+Filter dimension:	3
+Real time:		0.062928 sec
+
+Threads amount:		4
+Filter dimension:	3
+Real time:		0.024815 sec
+
+Threads amount:		8
+Filter dimension:	3
+Real time:		0.019766 sec
+
+Threads amount:		1
+Filter dimension:	31
+Real time:		6.848674 sec
+
+Threads amount:		2
+Filter dimension:	31
+Real time:		3.517989 sec
+
+Threads amount:		4
+Filter dimension:	31
+Real time:		1.972289 sec
+
+Threads amount:		8
+Filter dimension:	31
+Real time:		1.895398 sec
+
+Threads amount:		1
+Filter dimension:	65
+Real time:		29.509952 sec
+
+Threads amount:		2
+Filter dimension:	65
+Real time:		15.386595 sec
+
+Threads amount:		4
+Filter dimension:	65
+Real time:		8.100610 sec
+
+Threads amount:		8
+Filter dimension:	65
+Real time:		8.002442 sec
+
